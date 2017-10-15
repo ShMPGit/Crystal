@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="subject">Письмо с другого адреса</entry>
+    <entry key="from">msharagin@gmail.com</entry>
+    <entry key="content">Письмо с другого адреса успешно доставлено !</entry>
+</properties>
