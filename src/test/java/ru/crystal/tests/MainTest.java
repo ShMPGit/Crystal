@@ -127,14 +127,14 @@ public class MainTest {
         log.info("Получаем необходимое письмо");
         WebElement chosenLetter = GetInputLetter(subject, from);
         log.info("Проверка, что письмо найдено");
-        Assert.assertNotEquals(chosenLetter, null, "Не найдено письмо \"" + subject + "\"");
+        Assert.assertNotEquals(chosenLetter, null, "Не найдено письмо с темой \"" + subject + "\" и отправителем \""+from+"\"");
         log.info("Откроем данное письмо");
         chosenLetter.click();
         log.info("Проверка темы письма \"" + subject + "\"");
-        Assert.assertEquals(subject, letterPage.GetSubject(), "Не совпадает тема письма");
+        Assert.assertEquals(letterPage.GetSubject(), subject, "Не совпадает тема письма");
         log.info("Проверка отправителя письма \"" + from + "\"");
-        Assert.assertEquals(from, letterPage.GetFrom(), "Не совпадает отправитель письма");
+        Assert.assertEquals(letterPage.GetFrom(), from, "Не совпадает отправитель письма");
         log.info("Проверка тела письма");
-        Assert.assertEquals(content, letterPage.GetLetterBody(), "Не совпадает тело письма");
+        Assert.assertEquals(letterPage.GetLetterBody(), content, "Не совпадает тело письма");
     }
 }
